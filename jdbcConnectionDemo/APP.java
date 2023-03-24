@@ -12,7 +12,6 @@ import com.jdbcConnectionAll.DbConnection;
 public class APP {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		Scanner sc = new Scanner(System.in);
 		int ch;
 		String user = "root";
@@ -94,8 +93,9 @@ public class APP {
 			System.out.println("username and password not found");
 		}
 		} catch (SQLException e1) {
-			// TODO Auto-generated catch block
 			e1.printStackTrace();
+		} catch (ClassNotFoundException e) {
+			throw new RuntimeException(e);
 		}
 
 	}
